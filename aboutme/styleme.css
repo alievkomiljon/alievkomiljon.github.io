@@ -1,13 +1,14 @@
 body{
-    background-color:rgb(3, 77, 36);
-    color: rgb(204, 201, 24);
+    background: rgb(22,74,65);
+    background: linear-gradient(90deg, #daded4 0%, #A3BCB6 35%, #daded4 100%);
+    color: #3C403D ;
 }
 h1{
-    color:goldenrod;
+    color:#3C403D;
     text-align: center;
 }
 h2{
-    color:#daa520;
+    color:#3C403D;
     font-size: larger;
     font-family: Arial, "Arial Black", Verdana, "Trebuchet MS",Georgia, Tahoma, "Courier New", "Times New Roman";
 }
@@ -17,4 +18,34 @@ p{
 .moods{
     width: 250px;
     height: 170px;
+}
+a{
+    color:#39603D;
+    text-decoration: underline;
+}
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+#firstp::first-letter
+{
+	font-size: 150%;
+}
+#firstp{
+    display: inline-block;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg); 
+}
+dt{
+    color:red;
+}
+dl{
+    font-size: small;
 }
