@@ -55,8 +55,6 @@ body{
 }
 .left-contents{
     float: left;
-    width: -webkit-calc(100% - 270px);
-    width:    -moz-calc(100% - 270px);
     width:         calc(100% - 270px);
 
     margin: 10px;
