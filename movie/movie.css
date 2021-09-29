@@ -60,6 +60,7 @@ body{
     width:         calc(100% - 270px);
 
     margin: 10px;
+    overflow: auto;
     
 }
 
