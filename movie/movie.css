@@ -1,7 +1,8 @@
 body{
     margin: 0;
     padding: 0;
-    font-size: 100%;
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
     line-height: 1;
     background-image: url("background.png");
 }
@@ -14,14 +15,14 @@ body{
 #header{
     width: 100%;
     text-align: center;
-    font-size: large;
     font-weight: bolder;
-    font-size: 20pt;
-    text-shadow:1px 1px 2px black;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 24pt;
+    text-shadow:3px 3px #999999;
 }
 .main-box{
-    border:6px gray solid;
-    border-radius: 15px;
+    border:4px gray solid;
+    border-radius: 20px;
     margin: auto;
     padding: 0;
     width: 70%;
@@ -31,6 +32,9 @@ body{
 .validators{
     float: right;
     opacity: 0.5;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 .right-floated-items{
     float: right;
@@ -90,23 +94,26 @@ body{
 .textbox{
     border: 2px gray solid;
     border-radius: 10px;
-    background-color: #E7DC96;
+    background-color: #E8DC9B;
     vertical-align: super;
+    margin-top: 25px;
+    overflow: hidden;
 }
 .float-left{
     float: left;
+    padding-right: 5px;
+    box-sizing: border-box;
+    height: 100%;
 }
 q{
     vertical-align: text-top;
 }
 dt{
     font-weight: bolder;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.267);
     padding-top: 10px;
 }
-dl{
-    font-size: small;
-}
+
 #bottomp{
     background-color: #A1B963;
     clear: right;
@@ -114,5 +121,4 @@ dl{
     padding: 5px;
     width: 100%;
     text-align: center;
-    font-size: 8pt;
 }
