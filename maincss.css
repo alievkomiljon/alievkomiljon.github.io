@@ -17,10 +17,12 @@ div{
     margin:35px;
 }
 ul{
-    margin-bottom: 20px;
+    margin:auto;
+    width: 70%;
 }
 li{
     margin: 7px;
+    text-align: left;
 }
 .text-center{
     text-align: center;
