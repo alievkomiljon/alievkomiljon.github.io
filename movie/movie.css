@@ -30,11 +30,18 @@ body{
     
 }
 .validators{
-    float: right;
     opacity: 0.5;
     position: fixed;
     bottom: 0;
     right: 0;
+}
+#homepage{
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0.8;
+    background-color: #A1B963;
+    font-size: 30px;
 }
 .right-floated-items{
     float: right;
