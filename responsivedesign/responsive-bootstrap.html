@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Responsive Bootstrap Layout</title>
+        <link rel="stylesheet" href="responsive-bootstrap.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row header">Header</div>
+            <div class="row nav">
+                    <div class="col-xs-2 border border-dark p-2 text-white">
+                        Menu1
+                    </div>
+                    <div class="col-xs-2 border border-dark p-2 text-white">
+                        Menu2
+                    </div>
+                    <span class="col-xs-2 border border-dark p-2 text-white">
+                        Menu3
+                    </span>
+                    <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-3 column column1">
+                    Column1
+                </div>
+                <div class="col-sm-12 col-md-6 order-sm-3  column column2">
+                    Column2
+                </div>
+                <div class="col-sm-6 col-md-3 order-sm-1  column column3">
+                    Column3
+                </div>
+            </div> 
+            <div class="row footer">Footer</div>
+        </div>
+
+
+        <div id="homepage">
+            <a href="../index.html" alt="Home page">Home</a>
+        </div>
+    </body>
+</html>

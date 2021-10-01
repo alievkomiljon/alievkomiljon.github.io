@@ -1,0 +1,133 @@
+
+body{
+    margin: 0;
+    padding: 0;
+
+}
+header{
+    background-color: #ADD8E6;
+    text-align: center;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+nav, footer{
+    background-color: #2F4F4F;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: white;
+}
+section, nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu{
+    padding: 15px;
+    margin: 0px;
+    color: white;
+    border: 1px black solid;
+}
+.column{
+    display: inline;
+    padding-bottom: 250px;
+}
+.column1{
+    background-color: #AAAAAA;
+    width: 50%;
+}
+.column2{
+    background-color: #BBBBBB;
+    width: 100%;
+    order:3;
+}
+.column3{
+    background-color: #CCCCCC;
+    width: 50%;
+    order: 2;
+} 
+
+#homepage{
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0.8;
+    background-color: #A1B963;
+    font-size: 20px;
+}
+
+
+@media screen and (min-width:600px){
+    body{
+        margin: 0;
+        padding: 0;
+
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    header{
+        background-color: #ADD8E6;
+        text-align: center;
+        padding: 20px;
+        font-weight: bolder;
+        font-size: 20px;
+        font-family: sans-serif;
+    }
+    nav, footer{
+        background-color: #2F4F4F;
+    }
+    footer{
+        text-align: center;
+        padding: 20px;
+        font-size: 12px;
+        font-family: sans-serif;
+        color: white;
+    }
+    nav{
+        display: flex;
+    }
+    section{
+        display: flex;
+    }
+    .menu{
+        padding: 15px;
+        margin: 0px;
+        color: white;
+        border: 1px black solid;
+    }
+    .column{
+        display: inline;
+        padding-bottom: 250px;
+    }
+    .column1{
+        background-color: #AAAAAA;
+        width: 30%;
+    }
+    .column2{
+        background-color: #BBBBBB;
+        width: 40%;
+    }
+    .column3{
+        background-color: #CCCCCC;
+        width: 30%;
+    }
+
+    #homepage{
+        position: fixed;
+        top: 0;
+        right: 0;
+        opacity: 0.8;
+        background-color: #A1B963;
+        font-size: 20px;
+    }
+}
+
+
+
+
