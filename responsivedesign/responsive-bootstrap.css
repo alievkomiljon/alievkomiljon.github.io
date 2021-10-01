@@ -5,11 +5,16 @@ body{
 }
 .header{
     background-color: #ADD8E6;
-    text-align: center;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 30%;
     font-weight: bolder;
     font-size: 20px;
     font-family: sans-serif;
+    margin: 0 auto;
+}
+.header-parent{
+    background-color: #ADD8E6;
 }
 
 .footer{
