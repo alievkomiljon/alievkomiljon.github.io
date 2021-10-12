@@ -49,4 +49,12 @@ class Bank{
     }
 
 
+    endOfMonth(){
+        let reslt = "";
+        for(let i = 0; i < this.accounts.length; i++){
+            reslt += this.accounts[i].endOfMonth;
+        }
+        return reslt;
+    }
+
 }

@@ -21,6 +21,18 @@ describe("CheckingAccount class test", function(){
         });
     });
 
+
+    describe("Testing EndOfMonth() method of Bank", function(){
+        it("Expected output of 'endOfMonth()' is ''", function(){
+            let bank = new Bank();
+            bank.addSavingsAccount(778);
+            bank.addAccount();
+            bank.addCheckingAccount(-100);
+
+            assert.equal("", bank.endOfMonth());
+        });
+
+    })
     
 
 });

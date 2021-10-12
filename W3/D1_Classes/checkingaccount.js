@@ -26,5 +26,18 @@ class CheckingAccount extends Account{
     toString(){ 
         return "Checking account " + this._number + ": balance " + this._balance + ": overdraft " + this._overdraft;
     }
+
+    
+    /**
+     * Performs needed actions at the end of the month
+     * 
+     * @returns Checks if the balance is below zero,
+     */
+     endOfMonth() {
+        if(this.getBalance() < 0 ){
+            return "Warning, " + this.toString(); 
+        };
+       return "";
+   }
 }
 

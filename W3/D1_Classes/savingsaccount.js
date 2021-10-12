@@ -20,5 +20,15 @@ class SavingsAccount extends Account{
     toString(){ 
         return "Savings account " + this._number + ": balance " + this._balance + ": interest " + this._interest;
     }
+
+    /**
+     * Performs needed actions at the end of the month
+     * 
+     * @returns How much interest has been added
+     */
+     endOfMonth() {
+         this.addInterest(2.5);
+        return "Interest added " + this; // Returns how much interest has been added
+    }
 }
 
