@@ -1,42 +1,3 @@
-describe("CheckingAccount class test", function(){
-    
-
-    describe("Testing addSavingsAccount() method", function(){
-        it("Expected output of 'addSavingsAccount()' is 'Savings account 0: balance 0: interest 777'", function(){
-            let bank = new Bank();
-            //bank.addSavingsAccount(777);
-            //bank.addSavingsAccount(778);
-            bank.addAccount();
-            bank.addAccount();
-
-            assert.equal("Savings account 0: balance 0: interest 777\n", bank.accountReport());
-        });
-    });
-    describe("Testing getNumber() method", function(){
-        it("Expected output of 'getNumber()' is '1'", function(){
-            let bank = new Bank();
-            bank.addSavingsAccount(777);
-
-            assert.equal(1, this.nextNumber);
-        });
-    });
-
-
-    describe("Testing EndOfMonth() method of Bank", function(){
-        it("Expected output of 'endOfMonth()' is ''", function(){
-            let bank = new Bank();
-            bank.addSavingsAccount(778);
-            bank.addAccount();
-            bank.addCheckingAccount(-100);
-
-            assert.equal("", bank.endOfMonth());
-        });
-
-    })
-    
-
-});
-
 describe("Account class test", function(){
     describe("Testing constructor", function(){
         it("Expected output of constructor of 'new Account(777)' is { _number: 777, _balance: 0 }", function(){
@@ -200,3 +161,62 @@ describe("CheckingAccount class test", function(){
     });
 
 });
+describe("Bank class test", function(){
+
+    describe("addAccount", function() {
+        it("Adds new account and returns total account count which is 1", function() {
+            let bank = new Bank();
+            assert.equal(1, bank.addAccount());
+        });
+    });
+    
+    describe("addSavingsAccount", function() {
+        it("Expected output: Adds new savings account and returns total account count which is 1", function() {
+            let bank = new Bank();
+            assert.equal(1, bank.addSavingsAccount(4.5));
+        });
+    });
+
+    describe("addCheckingAccount", function() {
+        it("Expected output: Adds new checking account and returns total count", function() {
+            let bank = new Bank();
+            assert.equal(1, bank.addCheckingAccount(300));
+        });
+    });
+
+    describe("closeAccount", function() {
+        it("Expected output: Removes given account and returns remaining accounts count", function() {
+            let bank = new Bank();
+            bank.addAccount();
+            bank.addAccount();
+            bank.closeAccount(4)
+            assert.equal(1, bank.accounts.length);
+        });
+    });
+    describe("accountReport", function() {
+        it("Expected output: Returns list of accounts and their details", function() {
+            let bank = new Bank();
+            bank.addAccount();
+            bank.addCheckingAccount();
+            assert.equal('Account 6: balance 0\nChecking account 7: balance 0: overdraft undefined', bank.accountReport());
+        });
+    });
+
+});
+
+describe("Testing EndOfMonth() method of Bank", function(){
+    it("Output: Returns output of endOfMonth() function from all the accounts from array",
+        function() {
+            let bank = new Bank();
+            bank.addAccount();
+
+            bank.addSavingsAccount(10);
+            bank.accounts[bank.accounts.length - 1].deposit(100);
+
+            bank.addCheckingAccount(-777);
+            bank.accounts[bank.accounts.length - 1].withdraw(222);
+            assert.equal("\nInterest added Savings account 9: balance 102.5: interest 10\nWarning, Checking account 10: balance -222: overdraft -777",
+                bank.endOfMonth());
+        });
+
+})

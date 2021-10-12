@@ -1,28 +1,26 @@
+/**
+ * A Bank class
+ */
 class Bank{
-    constructor(){
-        this.accounts = [];
-    }
+    
+    accounts = [];
+    static nextNumber = 0;
     
     addAccount(){
-        let num = this.constructor.nextNumber;
-        this.accounts.push(new Account(num));
-        return num;
+        this.accounts.push(new Account(++Bank.nextNumber));
+        return this.accounts.length;
     }
     addSavingsAccount(interest){
-        let num = this.constructor.nextNumber;
-        this.accounts.push(new SavingsAccount(num, interest));
-        return num;
+        this.accounts.push(new SavingsAccount(++Bank.nextNumber, interest));
+        return this.accounts.length;
     }
     addCheckingAccount(overdraft){
-        let num = this.constructor.nextNumber;
-        this.accounts.push(new CheckingAccount(num, overdraft));
-        return num;
+        this.accounts.push(new CheckingAccount(++Bank.nextNumber, overdraft));
+        return this.accounts.length;
     }
 
     closeAccount(number){
-        if(this.accounts.indexOf(number) > -1){
-            this.accounts.splice(number, 1);
-        }
+        this.accounts = this.accounts.filter(x => x.getNumber() !== number);
     }
 
     accountReport(){
@@ -40,21 +38,9 @@ class Bank{
         return resultString;
     }
 
-    nextNumber() {
-        if(this.accounts.length == 0){
-            return 0;
-        }
-        let temp = this.accounts.slice(-1);
-        return temp.getNumber + 1;
-    }
-
-
-    endOfMonth(){
-        let reslt = "";
-        for(let i = 0; i < this.accounts.length; i++){
-            reslt += this.accounts[i].endOfMonth;
-        }
-        return reslt;
+    
+    endOfMonth() {
+        return this.accounts.map(account => account.endOfMonth()).join("\n").toString();
     }
 
 }
