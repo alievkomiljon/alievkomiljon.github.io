@@ -1,0 +1,70 @@
+W1D1 - 
+    Internet-is a connection of local computer networks all over the world. It includes WWW, email, chat online games services and more
+    Layers of communication protocols are: IP then TCP/UDP then HTTP/HTTPS/POP/FTP and more
+    IP stands for Internet protocol(underlining system of communication for every information exchanged across Internet).
+    TCP stands for Transmission Control Protocol(guarantees that messages are delivered).
+    Web servers are softwares that listen web requests.(IIS, Apache, ..)
+    Web browsers - gets/displays information recieved from web servers (Chrome, Mozilla Firefox, Safari, ...).
+    Sort of servers that saves ip andresses and written unique names as a key value pairs.
+    URL -stands for Uniform Resource Locator, identifier of web addresses with written words with dot separated values
+    HTML - hypertext markup language
+    Block level elements always start on a new line and takes all available width fully.
+    </hr> is horizontal rule
+W1D2 - Basic CSS (Cascading style sheets) 
+    Mostly used CSS properties are page's background, color, text, font and lists
+    CSS comments are /*this is comment*/
+    CSS syntax rule:
+    selector{
+        property: value;
+        property: value: ...
+    }
+    One CSS rule can be overridden by another, when another one is more specific(written last if equal specific)
+W1D3 - CSS page layouts
+    When it comes to Layouts, all html elements consists of: content, padding, border, margin.
+    visibility: hidden -> hides element, but its place will be empty. 
+    display:none; hides element as if it does not exist in current page.
+    float -> elements can be placed eather right or right side of containing box by setting float: right/left; rule.
+W1D4 - Responsive design
+    When making web page, developer must think about different sizes of displays, 
+    and the webpage must be responsive.
+    flexbox is 1 dimentional layout element. It has either rows or columns
+    Grid is 2 dimentional layout system, it has rows and columns.
+    to use flex or grid layouts, on css type display: flex or display:grid for respective element box.
+    Forms used in html, when user has to enter data.
+    Form uses two types of HTTP verbs, Get and POST.
+W1D5 - Java Script for modern web apps
+    Java Script is Client side scripting, which  means code does not runs in server but when recieved by browser it runs in browser.
+    JS block scoped variables are let and const.
+    As JavaScript is functional programming language, we have functional programming features,
+    for example we can use map, filter, reduce methods for collections for clean and fast code.
+    Semicolons are optional in JavaScript.
+W1D6 - GloJS programming env
+    There are six global DOM objects in JS: document, history, location, navigator, screen, window.
+    With Unobtrusive JavaScript we can separate HTML, CSS, and JavaScript codes into different files and use them together.
+    We should not use CSS styling inside of JS.
+    Mocha provides automated testing of JavaScript code. 
+W2D1 - JavaScript Functional programming
+    In JavaScript functions can be assigned to variables, passed as parameter to another function, can be return values.
+    There are three most commonly used functional programming methods in JavaScript: map, filter, reduce.
+    map, filter, reduce are pure functions, which means they have no side effects.
+    For input validation we can use Regular Expression, which is pattern matching tool, supported by almost all programming languages.
+W2D2 - Scope, Closure, Encapsulation
+    Difference between var and let is, var scope is the nearest function scope, while let is nearest enclosing scope.
+    JavaScript has two pass compilers, first one hoists variables and does variable declaration. second phase is JavaScriptengine.
+    Make sure function expressions are after function declaration, because Function expressions are not hoisted. 
+W2D3 - Modules and Objects.
+    For Encapsulation objects are used in JS.
+    Objects behave like associative arrays.
+    To refer an object's property we must use "this" keyword.
+
+W2D4 - Inheritance
+    All objects has their own hidden special property called [[Prototype]], its calue is null or another object.
+    To inherit functions of parent class, we use __proto__ .(child.__proto__ = parent;)
+    Difference between Constructor functions and regular functions are, 
+    constructor functions start with capital letter and executed only with "new" operator.
+
+WAP and SC - As you learn more and go deeper and deeper into web technologies, 
+    it will get easier or at least will be possible to solve much bigger,
+    world changing problems. Similarly, as you go deeper to your conciousness, 
+    and achieve your pure conciousness, 
+    you will be able to find better solutions to solve almost all problems in your life.
