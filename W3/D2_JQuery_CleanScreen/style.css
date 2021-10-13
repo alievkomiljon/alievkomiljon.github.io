@@ -1,0 +1,53 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.main-container{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+/* --------- Circle Styles --------- */
+.circle-container{
+    height: 100%;
+    position: relative;
+}
+.circle{
+    position: absolute;
+}
+
+/* --------- Input Element Styles --------- */
+.input-elements{
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    background-color: transparent;
+    width: 250px;
+}
+
+.form-item{
+    margin: 10px 5px;
+    font-size: 22px;
+}
+.form-item span{
+    display: block;
+    margin-bottom: 10px;
+}
+.form-item input{
+    padding:5px;
+    border-radius: 4px;
+    width: 100%;
+}
+.form-item button{
+    width: 50%;
+    height: 40px;
+    background-color: #53777A;
+    color: white;
+}
+.form-item button:hover{
+    background-color: #7a7ad5;
+    cursor: pointer;
+}
