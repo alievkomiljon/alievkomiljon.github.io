@@ -3,7 +3,7 @@ $(function(){
 
     let isStarted = false;
     let isTouchedTheWalls = false;
-    let isFinished = false;
+    let status = $("h2#status");
 
     $('.boundary').mouseover(function(){
         lost();
@@ -13,7 +13,7 @@ $(function(){
     });
 
     let lost = function(){
-        if(!isTouchedTheWalls && !isFinished && isStarted){
+        if(!isTouchedTheWalls && isStarted){
             $('.boundary').addClass('youlose');
             isTouchedTheWalls = true;
             isStarted = false;
@@ -23,19 +23,18 @@ $(function(){
 
 
     let alertLost = function(){
-        setTimeout(alert('Sorry, you lost!'), 100);
-        //$('<h2 class="alertheader">Sorry, you lost!<h2>').insertAfter('#status');
+        //setTimeout(alert('Sorry, you lost!'), 100);
+        status.empty().text("Sorry, you lost! Press S to start again");
     };
 
     let alertWon = function(){
-        alert('You won!\nPress S to start again');
-        //$('<h3>You won!\nPress S to start again<h3>').insertAfter('#status');
+        //alert('You won!\nPress S to start again');
+        status.empty().text("You won! Press S to start again");
     };
 
     $('#end').mouseover(function(){
-        if(!isTouchedTheWalls && !isFinished && isStarted){
+        if(!isTouchedTheWalls && isStarted){
             alertWon();
-            isFinished = true;
             isStarted = false;
         }
     });
@@ -43,7 +42,6 @@ $(function(){
     $('#start').click(function(){
         isTouchedTheWalls = false;
         isStarted = true;
-        isFinished = false;
         $('.boundary').removeClass('youlose');
     });
 
