@@ -1,4 +1,6 @@
 $(function(){
+    "use strict"
+
     let isStarted = false;
     let isTouchedTheWalls = false;
     let isFinished = false;
@@ -23,7 +25,7 @@ $(function(){
 
     let alertLost = function(){
         setTimeout(alert('Sorry, you lost!'), 100);
-    }
+    };
 
     $('#end').mouseover(function(){
         if(!isTouchedTheWalls && !isFinished && isStarted){
