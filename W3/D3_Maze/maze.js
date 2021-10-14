@@ -1,5 +1,5 @@
 $(function(){
-    "use strict"
+    "use strict";
 
     let isStarted = false;
     let isTouchedTheWalls = false;
