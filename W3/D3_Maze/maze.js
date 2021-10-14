@@ -43,6 +43,7 @@ $(function(){
         isTouchedTheWalls = false;
         isStarted = true;
         $('.boundary').removeClass('youlose');
+        status.empty().text("Press S to start again");
     });
 
 
