@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/addCookie.css">
+</head>
+
+<body>
+    <h2>Enter key value pairs to store on Cookies</h2>
+    <form method="post">
+        <input name="key" required />
+        <input name="value" required/>
+        <input type="submit" />
+    </form>
+
+    <h2>List of items</h2>
+    <% if(Object.keys(cookies).length > 0){ %>
+        <table>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+            <% for(let i of Object.keys(cookies)) { %>
+                <tr>
+                    <td><%= i %></td>
+                    <td><%= cookies[i] %></td>
+                </tr>
+            <% } %>
+        </table>
+    <% } %>
+</body>
+
+</html>

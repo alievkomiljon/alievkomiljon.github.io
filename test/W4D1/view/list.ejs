@@ -1,0 +1,20 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>UnorderedList</title>
+</head>
+
+<body>
+    <h2><% if(unorderedlist.length > 0) { %>
+        <li>List of items</li>
+    <% } %></h2>
+    <ul>
+        <% for(let i of unorderedlist) { %>
+            <li><%= i %></li>
+        <% } %>
+    </ul>
+    <a href="/add"><h1>Add element</h1></a>
+</body>
+
+</html>
