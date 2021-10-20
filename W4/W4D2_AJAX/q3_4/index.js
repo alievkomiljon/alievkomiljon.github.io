@@ -32,6 +32,15 @@ app.use(function (req, res, next) {
     {id: 4, name: 'Acer', price: '1000', image: "images/acer.png", description: 'Acer Aspire 5 17.3" FHD Laptop, 16GB RAM, 512GB SSD (Silver)'},
  ];
 
+ function getCartElementsCount(req){
+    if(req.session.shoppingCartList.length < 1){
+       return 0;
+    }
+    else{
+       return req.session.shoppingCartList.map(function(t){return t._value.quantity}).reduce((accumulator, curr) => accumulator + curr);
+    }
+ }
+
 
 app.get('/', (req, res) => {
    res.render("shop",{
@@ -44,6 +53,7 @@ app.get('/product/:id', (req, res) => {
    res.render("product",{
       css: "../css/product.css",
       item: products.find(p => p.id == req.params.id),
+      cartSize: getCartElementsCount(req),
    });
 });
 
@@ -67,10 +77,12 @@ app.post('/addToCart', (req, res) => {
        let temp = req.session.shoppingCartList;
       temp.find(c => c._key == name)._value.quantity++;
     }
-    res.write(JSON.stringify({result: "success"}));
+    res.write(JSON.stringify({cartSize: getCartElementsCount(req)}));
     res.status(200);
     res.end();
 });
+
+
 
 
 app.listen(3000);

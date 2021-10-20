@@ -12,7 +12,7 @@ $(() => {
                 .text('Success!! Added to the cart.')
                 .addClass('success')
                 .removeClass('error');
-                top.location.href="/cart"; //redirection to Cart
+            $("#cart_size").empty().text(" (" +json.cartSize + "-elements)");
         }).fail(() => {
             $(".message-div").empty()
                 .text('Error!! Cannot add to the cart.')
