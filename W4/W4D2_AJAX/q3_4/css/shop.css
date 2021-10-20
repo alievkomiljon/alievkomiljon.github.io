@@ -1,0 +1,35 @@
+body{
+    background-color: red;
+    margin: 0;
+    padding: 0;
+}
+.product{
+    border: 1px black solid;
+    min-width: 220px;
+    position: relative;
+    margin: 5px;
+}
+.image{
+    width: 200px;
+    margin-bottom: 30px;
+}
+.submit{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.pdescription{
+    padding-bottom: 50px;
+    font-size: small;
+}
+h1,h2{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+.name{
+    font-weight: bold;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+}

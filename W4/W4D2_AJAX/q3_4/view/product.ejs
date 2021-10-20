@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en'>
+ <head>
+ <meta charset="utf-8">
+ <title>Product</title>
+ <link rel="stylesheet" href=<%= css %>>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+ <script src="../js/index.js"></script>
+</head>
+<body>
+    <h1>Product page</h1>
+    <div class="message-div"></div>
+    <div id='product'>
+        <div id='imagediv'>
+            <img class='image' src="../<%= item.image %>" alt=<%= item.name %>>
+        </div>
+        <div id='name'><%= item.name %></div>
+        <div id='price'><span>Price: $</span><%= item.price %></div>
+        
+        <div><p class="pdescription"><span>Description: </span><%= item.description %></p></div>
+        
+        <form id="add">
+            <input type="hidden" name="name" value=<%= item.name %>>
+            <input type="hidden" name="price" value=<%= item.price %>>
+            <input class="submit" type="submit" value="Add to cart">
+        </form>
+    </div>
+ </body>
+</html>

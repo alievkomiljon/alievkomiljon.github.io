@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href=<%= css %>>
+    <title>Shopping Cart</title>
+</head>
+<body>
+<div class="grid-container">
+    <h2 class="header">Products in your shopping cart</h2>
+    
+    
+    <div class="content-Cart">
+        <%let order=0%>
+        <% for (let i in shopList) { %>
+            <div class="item"> <%order+=1 %> <%=order %>-
+                    <span><%= shopList[i]._key %></span>
+                    <span>Price: $ <%=shopList[i]._value.price * shopList[i]._value.quantity %></span>
+                    <span> Quantity : <%=shopList[i]._value.quantity %></span>
+            </div>
+
+        <% } %>
+    </div>
+    <div class='home'><a href="/">Back to products list</a></div>
+</div>
+</body>
+</html>
