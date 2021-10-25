@@ -1,0 +1,43 @@
+W3D1{
+    1:"When creating objects of Classes in JS constructor method is automatically called, and object will be initialized there",
+    2:"We use new keyword to create object of class",
+    3:"We can inherit other classes to the class with extends keyword"
+}
+W3D2{
+    1:"By using JQuery we can write much simpler selectors compared to DOM selectors, e.g. getElementByTagName("tag") -> $("tag")",
+    2:"JQuery returns array-like objects by wrapping original DOM object",
+    3:"JQuery has several methods for manipulating node, such as hide(), show(), empty(), html(), text(), val() ..."
+}
+W3D3{
+    1:"JS code runs inside of object and this object can be referred by 'this' keyword",
+    2:"There exist some events that do not let bubble, they are blur, load, focus mouseenter, ...",
+    3:"JavaScript cannot be multithreaded, but we can use asynchronous events using queue to store them and calling them one by one with 'event loop'"
+}
+W3D4{
+    1:"In order to run JavaScript code outside of browser we use Node.js",
+    2:"As we are writing Node.js project, the code will no longer being run in a browser, so there is no Window and Document object",
+    3:"There are 3 types of modules in Node.js: 1)Built-in modules of Node.js, 2) Third party modules from npmjs.com, 3)Modules that we create"
+}
+W3D5{
+    1:"npm is installed when we install Node.js, and with npm we can make packages from our project",
+    2:"We use 3** response status codes for redirecting",
+    3:"To throw errors we use 'throw new Error('Error message here')'"
+}
+W3D6{
+    1:"In order not to stop and restart the server manually when any changes have been made on project, we can use file-watching tools, they will automatically restart the server when noticed and change on the project, for example nodemon, node-dev, forever, ...",
+    2:"EJS stands for Embedded JavaScript",
+    3:"To use template files we can use render() method"
+}
+W4D1{
+    1:"cookie is key value pair and stored in browser",
+    2:"to set cookie we use res.cookie('cookiekey', 'cookie value'), to get its value we use req.cookies.cookiekey, to remove cookie -> res.clearCookie('cookieKey')",
+    3:"to differenciate a user from other users we use cookie, and it is called session, it is stored in server side"
+}
+W4D2{
+    1:"AJAX stands for Asynchronous JS and XML, which provides asynchronous funtionality to client side JS",
+    2:"AJAX request syntax can be defines as, it gets url, request type and date to send, and does specific action when response is successful and other predefined actions when it's failed",
+    3:"JSON stands for JS object notation"
+}
+SCI{
+    1:"When we fully understand how to control server side and client side application and set stable api between them, our project works perfectly, SCI- TM helps to understand our body and mind and helps to live fulfilling life"
+}
